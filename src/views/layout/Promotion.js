@@ -1,12 +1,13 @@
 import React from 'react';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/HeaderComponent';
+import Footer from '../components/FooterComponent';
+import Body from '../components/Promotion/Body';
 
 const PromotionLayout = () => (
     <div>
         <Header />
-        <div className='text-red-500'>PromotionLayout</div>
+        <Body />
         <Footer />
     </div>
 );

@@ -1,12 +1,8 @@
 import React from 'react';
 import Slider from 'react-slick';
 
-import ImgSlider1 from '../../../assets/images/slider.jpg';
-import ImgSlider2 from '../../../assets/images/mgtd_homeslide.jpg';
-import ImgSlider3 from '../../../assets/images/TOW_homeslide.jpg';
-
 export default function SimpleSlider() {
-    let settings = {
+    const settings = {
         dots: true,
         infinite: true,
         speed: 500,
@@ -17,15 +13,14 @@ export default function SimpleSlider() {
         /* eslint-disable react/jsx-props-no-spreading */
         <Slider {...settings}>
             <div>
-                <img className='w-full' src={ImgSlider1} />
+                <img className='w-full' src='https://mcdonalds.vn/uploads/2018/banner-slider/mgtd_homeslide.jpg' />
             </div>
             <div>
-                <img className='w-full' src={ImgSlider2} />
+                <img className='w-full' src='https://mcdonalds.vn/uploads/2018/banner-slider/TOW_homeslide.jpg' />
             </div>
             <div>
-                <img className='w-full' src={ImgSlider3} />
+                <img className='w-full' src='https://mcdonalds.vn/uploads/2018/banner-slider/slider.jpg' />
             </div>
-
         </Slider>
     );
 }

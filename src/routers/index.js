@@ -6,6 +6,7 @@ const MenuPage = Loadable(() => import(/* webpackChunkName: "js/home" */ '@Views
 const PromotionPage = Loadable(() => import(/* webpackChunkName: "js/home" */ '@Views/pages/Promotion'));
 const NewsPage = Loadable(() => import(/* webpackChunkName: "js/home" */ '@Views/pages/News'));
 const ContactPage = Loadable(() => import(/* webpackChunkName: "js/home" */ '@Views/pages/Contact'));
+const CardDetailPage = Loadable(() => import(/* webpackChunkName: "js/home" */ '@Views/pages/CardDetail'));
 
 const routers = [
     {
@@ -31,6 +32,10 @@ const routers = [
     {
         path: '/contact',
         component: ContactPage
+    },
+    {
+        path: '/menu/:slug',
+        component: CardDetailPage
     }
 ];
 

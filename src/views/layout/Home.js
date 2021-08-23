@@ -1,14 +1,15 @@
 import React from 'react';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/HeaderComponent';
+import Footer from '../components/FooterComponent';
 import Slider from '../components/Home/Slider';
+import Body from '../components/Home/Body';
 
 const HomeLayout = () => (
-    <div>
+    <div className='overflow-x-hidden'>
         <Header />
         <Slider />
-        <p>Home Page</p>
+        <Body />
         <Footer />
     </div>
 );

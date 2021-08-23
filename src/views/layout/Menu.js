@@ -1,12 +1,13 @@
 import React from 'react';
 
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import Header from '../components/HeaderComponent';
+import Footer from '../components/FooterComponent';
+import Body from '../components/Menu/Body';
 
 const MenuLayout = () => (
     <div>
         <Header />
-        <div className='text-red-500'>MenuLayout</div>
+        <Body />
         <Footer />
     </div>
 );
