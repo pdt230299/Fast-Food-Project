@@ -7,6 +7,7 @@ const PromotionPage = Loadable(() => import(/* webpackChunkName: "js/home" */ '@
 const NewsPage = Loadable(() => import(/* webpackChunkName: "js/home" */ '@Views/pages/News'));
 const ContactPage = Loadable(() => import(/* webpackChunkName: "js/home" */ '@Views/pages/Contact'));
 const CardDetailPage = Loadable(() => import(/* webpackChunkName: "js/home" */ '@Views/pages/CardDetail'));
+const CartPage = Loadable(() => import(/* webpackChunkName: "js/home" */ '@Views/pages/Cart'));
 
 const routers = [
     {
@@ -36,6 +37,10 @@ const routers = [
     {
         path: '/menu/:slug',
         component: CardDetailPage
+    },
+    {
+        path: '/cart',
+        component: CartPage
     }
 ];
 

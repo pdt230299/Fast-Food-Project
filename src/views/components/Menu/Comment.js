@@ -15,8 +15,8 @@ function Comment({ value }) {
     }
     makeStar(value.stars);
     return (
-        <div className='flex gap-x-8 py-4 md:py-8 w-2/3 border-2 border-gray-500 rounded-3xl hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300'>
-            <div className='w-20 ml-8 '>
+        <div className='flex gap-x-8 p-4 md:p-8 w-2/3 border-2 border-gray-500 rounded-3xl hover:border-indigo-400 hover:bg-indigo-100 transition-colors duration-300'>
+            <div className='w-20 '>
                 <img className='rounded-full' src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQwbGozsS9QP10p16rZiCrQD0koXVkI4c7LwUHab9dkmFRcN0VqCkB37f2y0EnySItwykg&usqp=CAU' />
             </div>
             <div>

@@ -4,7 +4,6 @@ import Proptypes from 'prop-types';
 function Pagination({ pagination, onPageChange }) {
     const { page, limit, totalRow } = pagination;
     const totalPages = Math.ceil(totalRow / limit);
-
     function handlePageChange(newPage) {
         if (onPageChange) {
             onPageChange(newPage);

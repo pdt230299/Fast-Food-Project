@@ -10,9 +10,9 @@ const commentApi = {
         const url = `/comments/${id}`;
         return axiosClient.get(url);
     },
-    post: (body) => {
+    post: ({ content, stars, productId }) => {
         const url = '/comments';
-        return axiosClient.post(url, { body });
+        return axiosClient.post(url, { content, stars, productId });
     }
 
 };

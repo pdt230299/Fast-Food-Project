@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 function FilterOption({ onFilter }) {
-    const [type, setType] = useState('cc');
+    const [type, setType] = useState('');
 
     function handleTypeChange(e) {
         setType(e.target.value);

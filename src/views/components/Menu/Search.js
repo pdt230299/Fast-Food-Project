@@ -16,12 +16,20 @@ function Search({ onSubmit }) {
     }
 
     return (
-        <div className="relative focus-within:text-gray-900">
+        <div className='relative focus-within:text-gray-900'>
             <form>
-                <span className="absolute inset-y-0 left-0 flex items-center pl-2">
-                    <svg fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" className="w-6 h-6"><path d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" /></svg>
+                <span className='absolute inset-y-0 left-0 flex items-center pl-2'>
+                    <svg fill='none' stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth={2} viewBox='0 0 24 24' className='w-6 h-6'>
+                        <path d='M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z' />
+                    </svg>
                 </span>
-                <input type="search" className=" focus:bg-yellow-300 focus:outline-none duration-300 ease-in-out py-2 text-black rounded-md pl-10 font-medium text-xl" placeholder="Search..." value={searchTerm} onChange={handleSearchTermChange} />
+                <input
+                    type='search'
+                    className=' focus:bg-yellow-300 focus:outline-none duration-300 ease-in-out py-2 text-black rounded-md pl-10 font-medium text-xl'
+                    placeholder='Search...'
+                    value={searchTerm}
+                    onChange={handleSearchTermChange}
+                />
             </form>
         </div>
     );

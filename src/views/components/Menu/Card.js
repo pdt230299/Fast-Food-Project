@@ -2,7 +2,14 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
-function Card({ value }) {
+function Card({ comments, value }) {
+    let stars = 0;
+    const listCommentOfProduct = comments.filter((element) => element.productId == value.id);
+    let average = listCommentOfProduct.reduce((sum, ele) => sum + ele.stars, 0) / listCommentOfProduct.length;
+    if (!Number.isNaN(average)) {
+        stars = Math.round(average);
+    }
+
     return (
         <div className='font-poppins group w-80 p-6 bg-white hover:shadow-2xl transition-all transform duration-200'>
             <img
@@ -20,6 +27,10 @@ function Card({ value }) {
                         {value.price}
                         $
                     </h1>
+                    <h1 className='text-2xl font-normal text-gray-700'>
+                        {stars}
+                        ⭐
+                    </h1>
                     <Link to={`/menu/${value.id}`} className='hover:opacity-60 text-gray-800 font-semibold hover:shadow-md transition duration-300'>
                         <button type='button' className='text-lg group-hover:bg-yellow-400 font-semibold py-2 px-6 text-white '>
                             Detail
@@ -32,7 +43,8 @@ function Card({ value }) {
 }
 
 Card.defaultProps = {
-    value: {}
+    value: {},
+    comments: []
 };
 
 Card.propTypes = {
@@ -42,7 +54,8 @@ Card.propTypes = {
         price: PropTypes.number,
         id: PropTypes.string,
         imgUrl: PropTypes.string
-    })
+    }),
+    comments: PropTypes.array
 };
 
 export default Card;
