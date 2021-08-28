@@ -15,10 +15,10 @@ function FilterOption({ onFilter }) {
 
     return (
         <div>
-            <select className='outline-none rounded-md bg-yellow-300 focus:bg-white border-2 border-yellow-300 focus:border-yellow-300 p-1 shadow-xl  ' onChange={handleTypeChange} value={type} required>
-                <option value=''>ALL</option>
-                <option value='Burger'>Burger</option>
-                <option value='Drink'>Drink</option>
+            <select className=' hover:bg-yellow-100 outline-none rounded-md bg-yellow-300 focus:bg-white border-2 border-yellow-300 focus:border-yellow-300 p-1 shadow-xl  ' onChange={handleTypeChange} value={type} required>
+                <option value=''>🍔🥛☕</option>
+                <option value='Burger'>🍔</option>
+                <option value='Drink'>🥛</option>
             </select>
         </div>
     );

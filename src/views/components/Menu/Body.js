@@ -65,11 +65,13 @@ function Body() {
     return (
         <div className='flex flex-col items-center gap-y-8 my-8 mx-auto max-w-6xl '>
             <h1 className=' text-center rounded-b-lg inline-block p-8 w-1/2 text-3xl font-poppins uppercase bg-yellow-300'>
-                ☕ Menu for you 🍔
+                ☕ Menu
+                <span className='hidden md:inline'> for you </span>
+                🍔
             </h1>
 
             <div className='flex flex-col items-center'>
-                <div className='w-full flex justify-around gap-x-20'>
+                <div className='w-full flex flex-col gap-y-4 items-center md:flex-row justify-around gap-x-20'>
                     <FilterOption onFilter={handleTypeChange} />
                     <Search onSubmit={handleSearchChange} />
                 </div>

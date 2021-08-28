@@ -11,16 +11,18 @@ export default function SimpleSlider() {
     };
     return (
         /* eslint-disable react/jsx-props-no-spreading */
-        <Slider {...settings}>
-            <div>
-                <img className='w-full' src='https://mcdonalds.vn/uploads/2018/banner-slider/mgtd_homeslide.jpg' />
-            </div>
-            <div>
-                <img className='w-full' src='https://mcdonalds.vn/uploads/2018/banner-slider/TOW_homeslide.jpg' />
-            </div>
-            <div>
-                <img className='w-full' src='https://mcdonalds.vn/uploads/2018/banner-slider/slider.jpg' />
-            </div>
-        </Slider>
+        <div className='overflow-hidden'>
+            <Slider {...settings}>
+                <div>
+                    <img className='w-full' src='https://mcdonalds.vn/uploads/2018/banner-slider/mgtd_homeslide.jpg' />
+                </div>
+                <div>
+                    <img className='w-full' src='https://mcdonalds.vn/uploads/2018/banner-slider/TOW_homeslide.jpg' />
+                </div>
+                <div>
+                    <img className='w-full' src='https://mcdonalds.vn/uploads/2018/banner-slider/slider.jpg' />
+                </div>
+            </Slider>
+        </div>
     );
 }

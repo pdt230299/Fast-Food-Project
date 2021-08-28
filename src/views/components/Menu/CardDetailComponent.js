@@ -11,14 +11,18 @@ function CardDetailComponent({ valueProduct, valueComment }) {
     const { useStateCart } = useContext(CartContext);
     const [cart, setCart] = useStateCart;
     function addCart() {
-        const newValueProduct = {
-            ...valueProduct,
-            quantity: 2
-        };
-        setCart([...cart, newValueProduct]);
-        alert('OKe');
+        const inCart = cart.some((ele) => ele.id == valueProduct.id);
+        if (inCart) {
+            alert('Products already in the cart!');
+        } else {
+            const newValueProduct = {
+                ...valueProduct,
+                quantity: 1
+            };
+            setCart([...cart, newValueProduct]);
+            alert('Product added successfully!');
+        }
     }
-
     return (
         <div>
             <section className=' font-poppins text-gray-700 body-font overflow-hidden bg-white'>
@@ -54,7 +58,7 @@ function CardDetailComponent({ valueProduct, valueComment }) {
                             </div>
                         </div>
                     </div>
-                    <div className='w-2/3 flex flex-col gap-8 border-2  border-gray-200 items-center py-12 rounded-lg'>
+                    <div className='md:w-2/3 w-full flex flex-col gap-8 border-2  border-gray-200 items-center py-12 rounded-lg'>
                         <h1 className=' text-2xl'>Comment</h1>
                         <CommentForm />
                         <FilterComments />

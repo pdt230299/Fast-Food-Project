@@ -8,10 +8,10 @@ const Body = () => (
                 className='rounded-lg'
                 src='https://mcdonalds.vn/uploads/2018/home/1170x300-GMALpx.jpg'
             />
-            <p className='text-white absolute top-1/3 left-12'>
+            <p className='text-white absolute top-1/3 left-12 '>
                 Ưu đãi độc quyền & hơn thế nữa
             </p>
-            <h1 className='text-2xl font-medium text-white absolute top-2/3 left-12'>
+            <h1 className='sm:text-2xl text-sm font-medium text-white absolute top-2/3 left-12'>
                 ỨNG DỤNG McDONALDS
             </h1>
         </div>
@@ -48,7 +48,7 @@ const Body = () => (
                             className='rounded-lg'
                             src='https://mcdonalds.vn/uploads/2018/home/home-banner-hamburger.jpg'
                         />
-                        <p className='font-poppins text-white absolute top-12 left-4 text-3xl font-light'>
+                        <p className='font-poppins text-white absolute top-12 left-4 text-sm sm:text-3xl font-light'>
                             Or Hamberger ?
                         </p>
                     </Link>

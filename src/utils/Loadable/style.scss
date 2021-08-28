@@ -1,12 +1,14 @@
-@import "../../assets/styles/theme/_variables";
+@import '../../assets/styles/theme/_variables';
 
 .loadable {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 570px;
-    .scaling-squares-spinner, .scaling-squares-spinner * {
+    .scaling-squares-spinner,
+    .scaling-squares-spinner * {
         box-sizing: border-box;
+        color: yellow;
     }
 
     .scaling-squares-spinner {
@@ -27,7 +29,7 @@
         width: calc(65px * 0.25 / 1.3);
         margin-right: auto;
         margin-left: auto;
-        border: calc(65px * 0.04 / 1.3) solid $primary;
+        border: calc(65px * 0.04 / 1.3) solid yellow;
         position: absolute;
         animation-duration: 1250ms;
         animation-iteration-count: infinite;
@@ -49,9 +51,7 @@
         animation-name: scaling-squares-spinner-animation-child-4;
     }
 
-
     @keyframes scaling-squares-animation {
-
         50% {
             transform: rotate(90deg);
         }
@@ -63,25 +63,25 @@
 
     @keyframes scaling-squares-spinner-animation-child-1 {
         50% {
-            transform: translate(150%,150%) scale(2,2);
+            transform: translate(150%, 150%) scale(2, 2);
         }
     }
 
     @keyframes scaling-squares-spinner-animation-child-2 {
         50% {
-            transform: translate(-150%,150%) scale(2,2);
+            transform: translate(-150%, 150%) scale(2, 2);
         }
     }
 
     @keyframes scaling-squares-spinner-animation-child-3 {
         50% {
-            transform: translate(-150%,-150%) scale(2,2);
+            transform: translate(-150%, -150%) scale(2, 2);
         }
     }
 
     @keyframes scaling-squares-spinner-animation-child-4 {
         50% {
-            transform: translate(150%,-150%) scale(2,2);
+            transform: translate(150%, -150%) scale(2, 2);
         }
     }
 }

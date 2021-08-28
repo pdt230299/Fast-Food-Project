@@ -5,6 +5,8 @@ import { useParams } from 'react-router-dom';
 import CardDetailComponent from '../components/Menu/CardDetailComponent';
 import productApi from '../../api/productApi';
 import commentApi from '../../api/commentApi';
+import Header from '../components/HeaderComponent';
+import Footer from '../components/FooterComponent';
 
 export const CommentContext = React.createContext();
 
@@ -36,9 +38,11 @@ function CardDetail() {
 
     return (
         <div>
+            <Header />
             <CommentContext.Provider value={{ commentContext: [comment, setComment], filterContext: [filter, setFilter] }}>
                 <CardDetailComponent valueProduct={product} valueComment={comment} />
             </CommentContext.Provider>
+            <Footer />
         </div>
     );
 }

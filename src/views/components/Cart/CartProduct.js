@@ -1,9 +1,35 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
 
+import { CartContext } from '../CartContext';
+
 function CartProduct({ product }) {
-    function onChaneInput(e) {
-        console.log(e.target.value);
+    const { useStateCart } = useContext(CartContext);
+    const [cart, setCart] = useStateCart;
+    const shallowCart = [...cart];
+    function onChangeInput(e) {
+        let inputValue = e.target.value;
+        if (inputValue == '') {
+            alert('Please do not leave the quantity box blank');
+            inputValue = '1';
+        }
+        if (inputValue > 100) {
+            alert('Please fill smaller 100');
+            inputValue = '1';
+        }
+        const newProduct = {
+            ...product,
+            quantity: parseInt(inputValue, 10)
+        };
+        const index = shallowCart.findIndex(ele => ele.id == newProduct.id);
+        shallowCart[index] = newProduct;
+        setCart(shallowCart);
+    }
+
+    function onChangeDelete() {
+        const index = shallowCart.findIndex(ele => ele.id == product.id);
+        shallowCart.splice(index, 1);
+        setCart(shallowCart);
     }
     return (
         <tr>
@@ -11,17 +37,16 @@ function CartProduct({ product }) {
                 <img src={product.imgUrl} className="w-20 rounded" alt="Thumbnail" />
             </td>
             <td>
+                <img src={product.imgUrl} className="w-20 rounded md:hidden" alt="Thumbnail" />
                 <p className=" font-medium mb-2 md:ml-4">{product.name}</p>
-                <form>
-                    <button type="submit" className="text-gray-700 md:ml-4">
-                        <small>(Remove item)</small>
-                    </button>
-                </form>
+                <button onClick={onChangeDelete} type="submit" className=" hover:text-red-400 text-gray-700 md:ml-4">
+                    Remove
+                </button>
             </td>
             <td className="justify-center md:justify-end md:flex mt-6">
                 <div className="w-20 h-10">
                     <div className="relative flex flex-row w-full h-8">
-                        <input onChange={onChaneInput} type="number" min='1' defaultValue={product.quantity} className="w-full font-semibold text-center text-gray-700 bg-gray-200 outline-none focus:outline-none hover:text-black focus:text-black" />
+                        <input onChange={onChangeInput} type="number" min='1' max='100' value={product.quantity} className="w-full font-semibold text-center text-gray-700 bg-gray-200 outline-none focus:outline-none hover:text-black focus:text-black" />
                     </div>
                 </div>
             </td>
