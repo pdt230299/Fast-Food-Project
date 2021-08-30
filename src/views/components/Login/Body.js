@@ -67,11 +67,6 @@ function Body() {
                 <Link to='/' className='hover:opacity-60 text-gray-800 font-medium transition duration-500 ease-in-out'>
                     <p className=' absolute right-2 bottom-2'>Home Page</p>
                 </Link>
-                <Link to='/dashBroad' className='hover:opacity-60 text-gray-800 font-medium transition duration-500 ease-in-out'>
-                    <p className=' absolute left-2 bottom-2'>
-                        Page
-                    </p>
-                </Link>
             </div>
             <>
                 <Transition appear show={isOpen} as={Fragment}>

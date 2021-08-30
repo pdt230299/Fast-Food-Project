@@ -20,7 +20,7 @@ function Body() {
     return (
         <div className="flex flex-col flex-grow font-poppins min-h-screen">
             <div className="flex items-center flex-shrink-0 sm:h-16 h-12 px-8 border-b border-gray-300">
-                <h1 className="sm:text-xl text-base font-medium">Orders</h1>
+                <h1 className=" uppercase sm:text-xl text-base font-medium">Orders</h1>
             </div>
             <div className="flex-grow p-6 overflow-auto bg-gray-200">
                 {ordersList.map((order, index) => <Order order={order} key={index} />)}
