@@ -7,7 +7,6 @@ import { AuthenticateContext } from '../../components/AuthenticateContext';
 function ProductsPage() {
     const { useStateAuthenticated } = useContext(AuthenticateContext);
     const [isAuthenticated] = useStateAuthenticated;
-    console.log(isAuthenticated);
     let result = <ProductsLayout />;
     if (isAuthenticated == false) {
         result = <Redirect to='/login' />;

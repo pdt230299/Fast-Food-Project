@@ -72,11 +72,11 @@ function Body() {
             setIsOpen(true);
         }
     }
+
     function closeModal() {
         setIsOpen(false);
     }
 
-    console.log(product);
     return (
         <div className="flex flex-col flex-grow font-poppins min-h-screen">
             <div className="flex items-center flex-shrink-0 sm:h-16 h-12 px-8 border-b border-gray-300">
