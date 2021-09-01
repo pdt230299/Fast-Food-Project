@@ -1,29 +1,44 @@
-Build development
+![Logo](https://i.ibb.co/YXDLyfk/Mc-Donalds.png)
+
+##Mc Donalds
+
+######Base Project
 
 ```
-git clone https://github.com/vunguyen10111995/react-base-saga
+https://github.com/vunguyen10111995/react-base-saga
 ```
 
-Install dependencies
+######MY WEB :
 
 ```$shell
-$ yarn
+https://pdtfastfood.web.app/
+UserName: admin
+Password: xinchao123
+But pls don't remove data 😂.
 ```
 
-Run development
-
-```$shell
-$ yarn start
-```
-
-Run build production
-
-```$shell
-$ yarn build
-```
-
-Fix error LF
+######Fix error LF for your first run on VSCode:
 
 ```$shell
 $ npm run lint -- --fix
+```
+
+######Backend I used :
+
+```$shell
+https://mockapi.io/
+
+Detail:
+https://604794ddb801a40017ccc864.mockapi.io/products
+https://604794ddb801a40017ccc864.mockapi.io/orders
+```
+
+######Technology I used:
+
+```$shell
+IDE : Visual Studio Code
+Framework CSS + Responsive : TailwindCSS
+Library JS : ReactJS
+Some Resources of Tailwind : HeroIcons, Headless
+API : MockAPI
 ```
