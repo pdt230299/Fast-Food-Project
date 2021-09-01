@@ -28,7 +28,7 @@ $ npm run lint -- --fix
 ```$shell
 https://mockapi.io/
 
-** Detail : **
+Detail :
 https://604794ddb801a40017ccc864.mockapi.io/products
 https://604794ddb801a40017ccc864.mockapi.io/orders
 ```
@@ -36,16 +36,18 @@ https://604794ddb801a40017ccc864.mockapi.io/orders
 ###### Technology I used:
 
 ```$shell
-**IDE** : Visual Studio Code
-**Framework CSS + Responsive** : TailwindCSS
-**Library JS** : ReactJS
-**Some Resources of Tailwind** : HeroIcons, Headless
-**API** : MockAPI
+IDE : Visual Studio Code
+Framework CSS + Responsive : TailwindCSS
+Library JS : ReactJS
+Some Resources of Tailwind : HeroIcons, Headless
+API : MockAPI
 ```
 
 ###### Detail in my notion:
 
 ```$shell
-**Project:** https://tungpd.notion.site/Project-07d4beb512c44693ac7c8d0d6dcdd2d1
-** REVIEW KNOWLEDGE :** https://tungpd.notion.site/REVIEW-KNOWLEDGE-29032f3971314d1a8200ddb791de71e6
+Project:
+https://tungpd.notion.site/Project-07d4beb512c44693ac7c8d0d6dcdd2d1
+REVIEW KNOWLEDGE :
+https://tungpd.notion.site/REVIEW-KNOWLEDGE-29032f3971314d1a8200ddb791de71e6
 ```
