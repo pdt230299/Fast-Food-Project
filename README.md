@@ -1,14 +1,14 @@
 ![Logo](https://i.ibb.co/YXDLyfk/Mc-Donalds.png)
 
-##Mc Donalds
+## Mc Donalds
 
-######Base Project
+###### Base Project
 
 ```
 https://github.com/vunguyen10111995/react-base-saga
 ```
 
-######MY WEB :
+###### MY WEB :
 
 ```$shell
 https://pdtfastfood.web.app/
@@ -17,23 +17,23 @@ Password: xinchao123
 But pls don't remove data 😂.
 ```
 
-######Fix error LF for your first run on VSCode:
+###### Fix error LF for your first run on VSCode:
 
 ```$shell
 $ npm run lint -- --fix
 ```
 
-######Backend I used :
+###### Backend I used :
 
 ```$shell
 https://mockapi.io/
 
-Detail:
+** Detail : **
 https://604794ddb801a40017ccc864.mockapi.io/products
 https://604794ddb801a40017ccc864.mockapi.io/orders
 ```
 
-######Technology I used:
+###### Technology I used:
 
 ```$shell
 IDE : Visual Studio Code
