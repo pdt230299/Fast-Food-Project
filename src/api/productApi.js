@@ -10,13 +10,20 @@ const productApi = {
         const url = `/products/${id}`;
         return axiosClient.get(url);
     },
+
     post: ({ name, imgUrl, price, type, description }) => {
         const url = '/products';
         return axiosClient.post(url, { name, imgUrl, price, type, description });
     },
+
     delete: (id) => {
         const url = `/products/${id}`;
         return axiosClient.delete(url);
+    },
+
+    put: ({ id, name, imgUrl, price, type, description }) => {
+        const url = `/products/${id}`;
+        return axiosClient.put(url, { name, imgUrl, price, type, description });
     }
 };
 

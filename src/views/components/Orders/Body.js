@@ -5,7 +5,7 @@ import Order from './Order';
 
 function Body() {
     const [ordersList, setOrdersList] = useState([]);
-
+    console.log(ordersList);
     useEffect(() => {
         const fetchProductList = async () => {
             try {

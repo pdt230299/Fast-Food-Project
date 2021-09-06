@@ -1,7 +1,8 @@
 import React, { useState, Fragment } from 'react';
 import PropTypes from 'prop-types';
-import { TrashIcon, PencilAltIcon } from '@heroicons/react/outline';
+import { TrashIcon, PencilAltIcon, CheckIcon, BackspaceIcon } from '@heroicons/react/outline';
 import { Dialog, Transition } from '@headlessui/react';
+import { Link } from 'react-router-dom';
 
 import productApi from '../../../api/productApi';
 
@@ -56,9 +57,11 @@ function Product({ setProductAfter, list, product }) {
                 </div>
             </div>
             <div className='flex mt-4 sm:mt-0'>
-                <button type='button' className="flex-no-shrink bg-blue-500 px-5 ml-4 py-2 text-sm shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-blue-500 text-white rounded-full">
-                    <PencilAltIcon className='w-4' />
-                </button>
+                <Link to={`products/edit/${product.id}`}>
+                    <button type='button' className="flex-no-shrink bg-blue-500 px-5 ml-4 py-2 text-sm shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-blue-500 text-white rounded-full">
+                        <PencilAltIcon className='w-4' />
+                    </button>
+                </Link>
                 <button onClick={showDialog} type='button' className="flex-no-shrink bg-red-500 px-5 ml-4 py-2 text-sm shadow-sm hover:shadow-lg font-medium tracking-wider border-2 border-red-500 text-white rounded-full">
                     <TrashIcon className='w-4' />
                 </button>
@@ -96,7 +99,7 @@ function Product({ setProductAfter, list, product }) {
                                         as="h3"
                                         className=' flex justify-center self-center text-lg font-medium leading-6 text-yellow-500'
                                     >
-                                        🔥 Do you really want to delete the product 🔥
+                                        🔥 Do you really want to delete the product ? 🔥
                                     </Dialog.Title>
                                     <div className="mt-4 flex gap-4 justify-center">
                                         <button
@@ -104,14 +107,14 @@ function Product({ setProductAfter, list, product }) {
                                             className="inline-flex justify-center px-4 py-2 text-sm font-medium text-red-900 bg-red-100 border border-transparent rounded-md hover:bg-red-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500"
                                             onClick={handleDelete}
                                         >
-                                            Yes!
+                                            <CheckIcon className='w-4' />
                                         </button>
                                         <button
                                             type="button"
                                             className="inline-flex justify-center px-4 py-2 text-sm font-medium text-blue-900 bg-blue-100 border border-transparent rounded-md hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-blue-500"
                                             onClick={closeModal}
                                         >
-                                            No!
+                                            <BackspaceIcon className='w-4' />
                                         </button>
                                     </div>
                                 </div>

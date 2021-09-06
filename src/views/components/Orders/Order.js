@@ -17,35 +17,33 @@ function Order({ order }) {
                 </div>
                 <div className='grid lg:grid-cols-3 md:grid-cols-2'>
                     {order.cart.map((element) => (
-                        <div>
-                            <div className='mb-2'>
-                                <img src={element.imgUrl} className='w-16 h-16' />
-                                <div className="flex flex-col ml-3">
-                                    <div className=" font-medium leading-none">
-                                        {element.name}
-                                    </div>
-                                    <p className="text-sm text-gray-600 leading-none mt-2">
-                                        <span className="font-medium leading-none mr-1">
-                                            Description :
-                                        </span>
-                                        {' '}
-                                        {element.description}
-                                    </p>
-                                    <p className="text-sm text-gray-600 leading-none mt-2">
-                                        <span className="font-medium leading-none mr-2">
-                                            Price :
-                                        </span>
-                                        {element.price}
-                                        {' '}
-                                        $
-                                    </p>
-                                    <p className="text-sm text-gray-600 leading-none mt-2">
-                                        <span className="font-medium leading-none mr-2">
-                                            Quantity :
-                                        </span>
-                                        {element.quantity}
-                                    </p>
+                        <div className='mb-4 xl:ml-12'>
+                            <img src={element.imgUrl} className='w-16 h-16' />
+                            <div className="flex flex-col ml-3">
+                                <div className=" font-medium leading-none">
+                                    {element.name}
                                 </div>
+                                <p className="text-sm text-gray-600 leading-none mt-2">
+                                    <span className="font-medium leading-none mr-1">
+                                        Description :
+                                    </span>
+                                    {' '}
+                                    {element.description}
+                                </p>
+                                <p className="text-sm text-gray-600 leading-none mt-2">
+                                    <span className="font-medium leading-none mr-2">
+                                        Price :
+                                    </span>
+                                    {element.price}
+                                    {' '}
+                                    $
+                                </p>
+                                <p className="text-sm text-gray-600 leading-none mt-2">
+                                    <span className="font-medium leading-none mr-2">
+                                        Quantity :
+                                    </span>
+                                    {element.quantity}
+                                </p>
                             </div>
                         </div>
                     ))}
